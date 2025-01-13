@@ -1,6 +1,4 @@
-# Sitekick Remastered
-
-[![Discord](https://img.shields.io/discord/603580736250970144.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/eKR2FKP)
+# Sitekick Remastered Website (MkDocs)
 
 Welcome to the repository for [Sitekick Remastered](https://sitekickremastered.com/)'s homepage, blog, and wiki! 
 
@@ -10,8 +8,19 @@ Welcome to the repository for [Sitekick Remastered](https://sitekickremastered.c
 1. [VSCode](https://code.visualstudio.com/) (Recommended)
 
 ## Setting up your environment
-1. Install dependencies by opening cmd and running: ```pip install mkdocs mkdocs-material mkdocs-material-extensions```
-1. Clone ```https://github.com/SitekickRemastered/Docs.git```
+1. Clone ```https://github.com/SitekickRemastered/Docs.git``` and navigate into the folder.
+
+2. Create and activate a virtual environment:
+```
+python3 -m venv venv
+```
+- To activate the venv:
+    - On Windows: `. venv/Scripts/activate`
+    - On Mac and Linux: `. venv/bin/activate`
+
+3. Install dependencies by opening cmd and running: ```pip install -r ./requirements.txt```
+
+
 
 ## Running the Local Server
 1. In commandline: ```cd C:\Path\You\Cloned\Repo\To\```
@@ -21,3 +30,5 @@ Welcome to the repository for [Sitekick Remastered](https://sitekickremastered.c
 When the server is running, any changes you save will be refreshed on the local server in real time.  Upon committing changes, if your changes are accepted, Github Pages will update the homepage directly >> https://sitekickremastered.com/
 
 Note: Changes to the landing page require refreshing another file or re-running *mkdocs serve*.
+
+Note 2: To exit the virtual environment, enter `deactivate` into your terminal.
