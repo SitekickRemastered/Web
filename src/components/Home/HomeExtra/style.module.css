@@ -1,0 +1,97 @@
+.extraCardContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.extraCard:first-child {
+  margin-right: 10px;
+}
+
+.extraCard:last-child {
+  margin-left: 10px;
+}
+
+.extraCard h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.extraCardContent {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.extraCardContent div {
+  padding: 20px;
+}
+
+@media screen and (max-width: 996px) {
+
+  .extraCard:first-child,
+  .extraCard:last-child {
+    margin: 10px 0px;
+  }
+
+  .extraCard h1 {
+    font-size: 2rem !important;
+  }
+
+  .extraCardContent {
+    font-size: 1.5rem;
+  }
+
+  .extraCardContent div {
+    padding: 10px;
+  }
+
+  .extraCardContent img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .extraCard h1 {
+    font-size: 1.5rem
+  }
+
+  .extraCardContent {
+    font-size: 1.2rem;
+  }
+
+  .extraCardContent img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+
+  .extraCard {
+    border-radius: 40px;
+  }
+
+  .extraCard h1 {
+    font-size: 4rem;
+  }
+
+  .extraCardContent div {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+  .extraCard {
+    border-radius: 40px;
+  }
+
+  .extraCard h1 {
+    font-size: 5rem;
+  }
+
+  .extraCardContent div {
+    font-size: 3rem;
+  }
+}

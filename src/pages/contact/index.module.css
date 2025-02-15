@@ -1,0 +1,36 @@
+.contactContainer{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactContainer h1 {
+  font-size: 2.5rem;
+}
+
+.contactContainer p {
+  font-size: 1.25rem;
+}
+
+.contactContainer div {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contactContainer div div {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kablooeyDiv {
+  background-color: #007afe;
+  color: #FFF;
+}
+
+.kablooeyA {
+  color: var(--sitekick-yellow) !important;
+}

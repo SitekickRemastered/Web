@@ -1,0 +1,101 @@
+.resetPasswordContainer {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.resetPasswordContainer h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+form input {
+  width: 100%;
+  font-size: 24px;
+}
+
+form a {
+  margin: 40px auto 0px;
+}
+
+.passwordRequirements li::marker {
+  font-size: 1.5rem;
+}
+
+.passwordRequirements li {
+  padding-left: 10px;
+}
+
+.passwordRequirements .checked::marker {
+  content: '\2713'; /* Checkmark symbol */
+  color: green;
+}
+
+.passwordRequirements .unchecked::marker {
+  content: '\2717'; /* X symbol */
+  color: red;
+}
+
+input.error,
+input:focus.error {
+  outline: none;
+  box-shadow: 0 0 0 1px red;
+}
+
+.inputError {
+  margin-top: 10px;
+  color: #F00;
+}
+
+@media screen and (max-width: 996px) {
+  .resetPasswordContainer {
+    margin: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resetPasswordContainer h1 {
+    font-size: 2rem;
+  }
+  
+}
+
+@media screen and (min-width: 2000px) {
+
+  .resetPasswordContainer {
+    margin: 4rem auto;
+    font-size: 1.75rem;
+  }
+
+  .resetPasswordContainer h1 {
+    font-size: 3.5rem;
+  }
+
+  form input {
+    font-size: 2.5rem;
+  }
+
+  .passwordRequirements li::marker {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+
+  .resetPasswordContainer {
+    margin: 6rem auto;
+    font-size: 2.5rem;
+  }
+
+  .resetPasswordContainer h1 {
+    font-size: 5rem;
+  }
+
+  form input {
+    font-size: 3rem;
+  }
+
+  li::marker {
+    font-size: 3rem;
+  }
+}

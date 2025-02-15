@@ -1,0 +1,169 @@
+@keyframes float {
+  from { transform: translateY(0) }
+  to { transform: translateY(1rem) }
+}
+
+@keyframes float-inverse {
+  from { transform: translateY(0) }
+  to { transform: translateY(-1rem) }
+}
+
+.heroBanner {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.lOrder {
+  order: 1;
+}
+
+.rOrder {
+  order: 2;
+}
+
+.spacer {
+  padding: 0px 10px;
+}
+
+.hero_title {
+  font-size: max(2.25vw, 2.25vh);
+}
+
+.hero_subtitle {
+  font-size: max(1.2vw, 2vh);
+}
+
+.heroPanelPicture {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.heroPanelImage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.heroPanelSitekick {
+  animation-direction: alternate;
+  animation-duration: 1.35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  min-width: 35%;
+  max-width: 35%;
+}
+
+.heroPanelSitekickLeft {
+  animation-name: float;
+  /* Legitimately don't ask me how this works */
+  top: calc(50% - max(14vw, 14vh)); 
+  left: 10%;
+}
+
+.heroPanelSitekickRight {
+  animation-name: float-inverse;
+  /* Like, seriously. No clue. */
+  bottom: calc(50% - max(10vw, 10vh));
+  right: 20%;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    width: 100%;
+    margin: 0px 0px;
+    align-items: center;
+    border-radius: 0px;
+    padding: 0rem;
+    word-wrap: normal;
+  }
+
+  .homeRow {
+    margin: 0;
+  }
+
+  .lOrder {
+    order: 2;
+  }
+
+  .rOrder {
+    order: 1;
+  }
+
+  .spacer {
+    padding: 0px;
+  }
+
+  .hero_title {
+    font-size: 2rem !important;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero_subtitle {
+    font-size: 1.3rem !important;
+    padding: 0px 30px;
+  }
+
+  .heroPanelImage {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .heroPanelSitekick {
+    min-width: 30%;
+    max-width: 30%;
+  }
+
+  .heroPanelSitekickLeft {
+    top: 0%;
+    left: 15%;
+  }
+
+  .heroPanelSitekickRight {
+    right: 20%;
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 498px) {
+
+  .hero_title {
+    font-size: 1.75rem;
+  }
+
+  .hero_subtitle {
+    font-size: 1rem;
+  }
+
+  .heroPanelImage {
+    width: 100%;
+  }
+
+  .heroPanelSitekick {
+    min-width: 35%;
+    max-width: 35%;
+  }
+
+  .heroPanelSitekickRight {
+    right: 17%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+
+  .heroBanner {
+    margin: 40px auto;
+  }
+}
+
+
+@media screen and (min-width: 4000px) {
+
+  .heroBanner {
+    margin: 50px auto;
+  }
+}

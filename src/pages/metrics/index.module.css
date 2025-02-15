@@ -1,0 +1,23 @@
+.metricsContainer {
+  width: 90%;
+  margin: 2rem auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(70vh);
+  /*min-height: calc(100vh - 11vh);*/
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.metricsCard {
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid var(--text-colour);
+  padding: 2rem;
+  margin: 1rem;
+}
+

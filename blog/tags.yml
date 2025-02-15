@@ -1,0 +1,14 @@
+updates:
+  label: Updates
+  permalink: /updates
+  description: Game updates
+
+news:
+  label: News
+  permalink: /news
+  description: Information about the game or team
+
+game:
+  label: Game
+  permalink: /game
+  description: Information about the game

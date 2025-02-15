@@ -1,0 +1,30 @@
+skrTeam:
+  name: "Sitekick Remastered Team"
+  title: "@sitekickremastered"
+  url: "https://github.com/sitekickremastered"
+  image_url: https://avatars.githubusercontent.com/u/150977749
+
+frantic:
+  name: "Dr. Frantic"
+  title: "YAP! Industries Inventor"
+  image_url: "/img/frantic_pfp.png"
+
+crow:
+  name: "[GM] Nicholas"
+  title: Administrator / Game Director
+  url: https://github.com/SK-Crow
+  image_url: https://avatars.githubusercontent.com/u/1341176
+
+mattster:
+  name: "[GM] Mattster"
+  title: Lead Developer
+  image_url: https://avatars.githubusercontent.com/u/1545963
+
+michael:
+  name: "[GM] Michael"
+  title: Developer
+  url: https://github.com/natural-stupidity
+  image_url: https://avatars.githubusercontent.com/u/91761269
+  
+  
+

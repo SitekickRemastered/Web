@@ -1,0 +1,69 @@
+import InfoBox from "@site/src/components/Wiki/InfoBox";
+
+# SitePic
+
+<div className="row wiki-parent">
+    <div className="col wiki-content-col">
+    SitePic is Sitekick Remastered's third Legendary Sitekick. He was first unveiled on March 15, 2021.  Players can message SitePic to generate their very own Sitekick profile pictures by leveraging a wide range of variables.
+
+    ## Features
+
+    - Custom profile picture generation
+    - Dynamic color customization (RGB, HEX, gradient support)
+    - Preset color options
+    - Multi-body color support
+    - Heterochromia support
+    - Rotation, zoom, flipping, and XYZ translation
+    - Automatic image processing
+
+    ## General Commands
+
+    - **/help** - Opens help menu. If it already exists, a link to this message will be posted.
+    - **/menu** - Opens the main menu.
+    - **/clear** - Clears 100 bot messages. Note: This might take a while.
+    - **/reset** - Resets your profile picture to the default Sitekick.
+
+    ## Image Editing Commands
+    - **/fill** - Allows you to input an RGB or HEX value for the body or eyes.
+    - **/linear_gradient** - Set the colour of the body or eyes to a linear gradient.
+    - **/bilinear_gradient** - Set the colour of the body or eyes to a bilinear gradient.
+    - **/body_sections** - Allows you to customize each section of the Sitekick's body.
+    - **/eye_sections** - Allows you to customize each section of the Sitekick's eyes.
+    - **/heterochromia** - Lets you make a Sitekick with two different colour eyes.
+    - **/rotate** - Rotates the profile picture.
+    - **/zoom** - Allows you to zoom into the profile picture.
+    - **/translate** - Allows you to shift the profile picture.
+    - **/flip** - Allows you to flip the profile picture... looks weird.
+    - **/presets** - Lets you choose from a list of presets.
+
+    ## Presets
+    - **Kablooey** - Sets your avatar to Kablooey's body & eye colors.
+    - **Authicer** - Sets your avatar to Authicer's body & eye colors.
+    - **Paul** - Sets your avatar to Paul's body & eye colors.
+    - **Deadkick** - Sets your avatar to a deactivated Sitekick's body color & closed eyes.
+
+    </div>
+    <div className="col wiki-infobox-col">
+        <InfoBox 
+            title={"SitePic"}
+            imgUrl={"/img/wiki/characters/sitepic.png"}
+            imgAlt={"SitePic's profile picture on Discord."}
+            caption={"SitePic's profile picture on Discord."}
+            categories={
+                {
+                "Affiliation:": "The second sitekick made by the Sitekick Remastered Team from Dr. Frantic's schematics.",
+                "Biographical Information": {
+                    "Manufactured:": "March 15, 2021",
+                },
+                "Physical Description": {
+                    "Model:": "MK III",
+                    "Paint:": "Tetratone Linear Gradient",
+                    "Eye Color:": "Gray",
+                    "Sex:": "Male"
+                },
+                "Examine:": "sipik"
+                }
+            }
+        />
+    </div>
+</div>

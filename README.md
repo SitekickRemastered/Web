@@ -1,23 +1,34 @@
-# Sitekick Remastered
+# Sitekick Remastered Website
 
-[![Discord](https://img.shields.io/discord/603580736250970144.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/eKR2FKP)
+Welcome to the repository for [Sitekick Remastered](https://sitekickremastered.com/)'s website! 
 
-Welcome to the repository for [Sitekick Remastered](https://sitekickremastered.com/)'s homepage, blog, and wiki! 
+This website is made using [Docusaurus 3.7](https://docusaurus.io/).
 
 ## Software Needed
 1. Git
-1. [Python 3.12 or later](https://www.python.org/)
+1. [Node 22.13.0 or later](https://nodejs.org/en/download)
 1. [VSCode](https://code.visualstudio.com/) (Recommended)
 
 ## Setting up your environment
-1. Install dependencies by opening cmd and running: ```pip install mkdocs mkdocs-material mkdocs-material-extensions```
-1. Clone ```https://github.com/SitekickRemastered/Docs.git```
+1. Clone ```https://github.com/SitekickRemastered/Web.git``` 
+1. Navigate into the `/Web/` directory
+1. Run `npm i` to install dependencies
+1. Use `npm start` to start the site
+    - The site should run locally on http://localhost:3000/
 
-## Running the Local Server
-1. In commandline: ```cd C:\Path\You\Cloned\Repo\To\```
-1. ```mkdocs serve```
-1. Open http://localhost:8014/ in your browser
+## Note for Wiki Editors
+If you're editing the wiki, the only folder you need is `/docs/`.
 
-When the server is running, any changes you save will be refreshed on the local server in real time.  Upon committing changes, if your changes are accepted, Github Pages will update the homepage directly >> https://sitekickremastered.com/
+Each folder within `/docs/` will generate a category for the wiki, and inside you should have a `_category_.json` file. `_category_.json` only needs the following:
+```json
+{
+  "label": "Chipendium", // The text that will appear on the sidebar of the wiki
+  "position": 3          // The position in the sidebar the category will have
+}
+```
 
-Note: Changes to the landing page require refreshing another file or re-running *mkdocs serve*.
+From there, you can create pages through an `.mdx` file.
+
+`.mdx` is essentially markdown with a few more added features; specifically the ability to write JSX within the markdown files and render React components. You don't need JSX to create pages, but if you choose to create some components, please put them into `/src/components/Wiki/`.
+
+You can read more about `.mdx` files on the [Docusaurus docs](https://docusaurus.io/docs/markdown-features/react).

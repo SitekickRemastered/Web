@@ -1,0 +1,9 @@
+.footerLogoLink {
+  aspect-ratio: 473 / 247;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footerLogoLink:hover {
+  opacity: 1;
+}

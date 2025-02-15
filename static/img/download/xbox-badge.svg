@@ -1,0 +1,23 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 44" width="152" height="44">
+	<title>xbox-badge</title>
+	<defs>
+		<image width="36" height="29" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAdCAYAAADCdc79AAADBUlEQVRYR+2WW4hNURjHZxdKqSnFaKhhNCiMIoaheGGQEiI1xiV5wJgJSTGUMpSUNBcpKZfcHqRcBw9EJA9knAeD5BIahcmIt+P3P7M2yz5777Nnn5dTM6v+rbW+9f++9T/fWvtbx8nLsebkmJ68XkGZTqTnZiiZTOaTndHgm+M4L4MylZYhHKshN4Sktp21NpAAjQR/HsQl1kDWasEyMMbi/WJ8CzThf9P2jyPIu/98gl73GhGzGNtxoMz8AI/BEzAETADjjM9l+kpiiJP+lVkZknplK63BKcW4FawEnaAY7heXyLrsJ8x8F2t7fQSPxXbOCJPQcni/wzIUKMja+BrjeWAdwY7JjphRdC8Mp8J7JLYwuAOYXwEzQQPcmmwFrSdQMzhCsA1GUBO9xnXY6v0y7BE1mPlr0AcUhglqJuDGsID8wj2s7wa63JuMoJ/GpwCbjjNjI85hSDWpTHvZ1h0KFQRvEL6toADMZfMWbNMYPwBXmS/IqMQQ8NOx6/jP/BWEsRxDP7DIqL1EL+XeNhTDRFAFJOoGmyug7s9aOt2lemx13RCkL+8TSKQEEUgiLkYNYPE+MC5j848mzjb6A2Antn3diYeGJPxOV9BmJqoXalOAfrHqhtLobX0x9AcqdsqWCuMMBHQQU3euEexnviOGoO/ZfmUX2HQpOImAVQhazvgsOM1cRxqp4VcCUdW/Lfal1k6mjnRVWJoV+C3T4ZHUdMVZQ6eq/u9Su85RvzKL/4zxeFCKiFb83zCWmFnM70YRhc99eNNBVVYZMll6Tz8MlCDglXWPEszd9ypQF/wVLJ4C7+AXZSWIYHMI1ALaCaZ6lGrYH9JNBXfAEta++imyyoSWZ8O7HetSE0gZqQT6OiVkNcHcx1SCZFOBLAafwUHwCDwFhUCvvfwXGqHV+OvJCX3tVVv8/kjpQZxk/eItBDvkzQCiRmA7Dyb7ZcfYOui343/U5cT9P6Qv6x5QvdGFDGwIq2BRNWukRdJ7p6NWefjvOHvuf+qwLNprvRnKlKmcy9Af2PdJvB3UOEQAAAAASUVORK5CYII="/>
+		<image width="29" height="29" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADWUlEQVRIS62Xa2jOURzH97zTCIVlW9Fc8gJlM8OKRnNJmhfkkuvihdFIVhKmoUUm8sIkYy4Rym1kb5CQp6whcym3uW0ol3nBKz0+Xz3/x3n+O////3m2nfr2/5/f7/v7fs/57zznnIVSEmiRSGQQtMVgGBgAskAGaAZvwFvwCBwPhULfgiRDfoSo2V44RUFCRv4I73swf+pV42uqIoz78BgMZoFikG4RayRWDS5g9lU1enbY1F2IYAGxlWAeOAEqMXiexJdIiZspgr0ofgB+gArELnmJwU0j/8Unv5ncIvAe3hST5zatJznNIJzlfQ1FnxOdCYPJgXsIjDZqdqKx0enHTCFXECy3iL8kVkDRxyBjNCbBuQJSLdwiNOoU/2cKOZPHBx/RF+QmUvTJ53PmkbvpYaiyV9QPMU0P01nuYyqzsRS98zHNJ3c34GuUoHEwxCx7QmwLIOdBvp/A59XANQGv1oTOSJnOhXHGh7gJYmWQoZNHT3+3mT78LJmehLDQg3QHwwm2HHXp5FrdOeL9iD0BetpaqUy1m2Rbsj+JDUe43QKjZje5MlBMvtZiPJ3YNQ/TaplqtP0thFUIamuLa/DPEZhjBMvhbbfwThFbYNG9LNOIJdGA0BgzDq0b/atgsoWvDV4zjzV9fjr6qXV38cMy1W6T5kroN3nbJSLDGR6fTOGt1Gxz1WyhHxejXy/Tx7yMMMh1FMcdZXBOk5/vY+ikVlN7wOlQ14P318BcVLUyrSW41BDMp/CeUbif99IEDB3KbOrPG/XaWrXFOm2tTJfROxqNNFIQ26jJlRCPjTwJ41Ho6CahLVazNE+jXJn2Jvg9KhhbscQT2da8xtFMIhtjHZEy1hGpP1krsQxnwz9GYAnIJNgSXalN9HVj6GirQWtF1NTZHtcR2+eYaiGFCegPr5Hpd6dDuLNtPJph9HIRugiG0v9tnqdlBKog9CWp253tTEx2ENfRLERTN8gc3mX8/7pCIpXgL576zPrcXdV0VW2TtiPY7jaI6XqSVV3liI5uHbdMPZvpQAgi6dnZZj2lrPfe6E5Sg6PO2o60PxRpMe5glnqPa0E3/ELYu7QIknDWIb4Bs2deNYE3fBUy86k8xgHtVvo/RieIVnlLFDpNGsANzB4GDfAvWd5Go0Hi0zoAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #107c10;stroke: #979797 } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<g id="Design">
+		<g id="Game-Detail-Among-Us">
+			<g id="xbox">
+				<path id="Rectangle" fill-rule="evenodd" class="s0" d="m6.5 0.5h139c3.3 0 6 2.7 6 6v31c0 3.3-2.7 6-6 6h-139c-3.3 0-6-2.7-6-6v-31c0-3.3 2.7-6 6-6z"/>
+				<g id="Shape">
+					<path class="s1" d="m121.7 32l-5.7-7.8-5.7 7.8h-2.3l6.8-9.4-6.2-8.6h2.3l5.1 7 5.1-7h2.3l-6.2 8.6 6.8 9.4zm-44.7 0l-6.8-9.4 6.2-8.6h-2.3l-5.1 7-5-7h-2.4l6.3 8.6-6.9 9.4h2.4l5.6-7.8 5.7 7.8z"/>
+					<use  href="#img1" transform="matrix(1,0,0,1,74,8)"/>
+					<use id="Layer copy" href="#img2" transform="matrix(1,0,0,1,28.5,8)"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

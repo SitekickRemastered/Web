@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 705 47" width="705" height="47">
+	<title>bg_boards</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(705,0,0,47,0,23.5)">
+			<stop offset="0" stop-color="#821eb7"/>
+			<stop offset=".295" stop-color="#c463fe"/>
+			<stop offset=".7" stop-color="#c05ff9"/>
+			<stop offset="1" stop-color="#821eb7"/>
+		</linearGradient>
+		<image  width="1342" height="47" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABT4AAAAvCAMAAAD9wiUKAAAAAXNSR0IB2cksfwAAAc5QTFRFul7xgh63gh+3gh+4gx+4gyC4hCC5hCG5hCG6hSG6hSK6hiK7hiO7hiO8hyO8hyS8hyS9iCW9iCW+iSa+iie/iifAiijAiyjAiynBjCnBjCrCjSrCjSvCjSvDjivDjizDjizEjy3Ejy3FkC7FkC7GkC/GkS/GkS/HkjDHkjDIkjHIkzHIkzLJlDLJlDPKlTPKlTTLljXMlzbNmDfOmTjPmjnPmjnQmjrQmzrRmzvRnDvRnDzSnT3Tnj7Unz/VoEDWoEHWoUHXoULXokLYokPYo0PZo0TZo0TapEXapUbbpUbcpkfcpkjdp0jdp0neqEneqEreqErfqUrfqUvfqkvgqkzgqkzhq0zhq03irE7irE7jrU/jrU/krVDkrlDkrlHlr1Hlr1LmsFLmsFPnsVPnsVToslToslXps1bps1bqs1fqtFfqtFfrtFjrtVjrtVjstVnstlnstlnttlrtt1rtt1rut1vuuFvuuFvvuFzvuVzvuV3wuVzwslbpsVPosFLnr1HmrlDlrE/jq07iq03hqUvgpUfcpEbbokPZoEHXn0DWn0DVnj/VnTzTnDvSmTnPmDjOlzfNlDLKkzHJkTDHiSe/iSa/iCS9gyC5AAAAK1OI9AAAAJp0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AMuwhWMAAANrSURBVHic7Zw7axRhFEDv/AcbIfgEgxIhiI0IilaCEhBBUCSVEgsfYJUmEBHESjAWGlKpaKEg+AALCwkINiriWyEYgjb+B3ec3SxrzmSvKEZC9Jx9zbmzyQ4fw2GqKUJksSjmDYqi/dnaW320H0VLZl9ta71adDY6O2L2e9EZ1gazI/xh8WMQc59R4AfbP1871IVdkW/d95Wt90bXKedlZ6vRZTZnjGFnXp+2WVa9vnbf9UvUj7xi+ZfWR0/MVO8rY7qMNTFVVgdQ9r6PcsOb6HtZHU5/xLMyGq15GVsfl9smm5s742Hlux6Uu4t7A3eqyd7bse9WNSoPxPVD12LwSvNbzd89PFEOXYrGsYtlk2g925vNRyNOFyPNaZwdjuiMZzcjxo63F6Qxb2GK8T9YD/nHGRr/u3708s/95AX68Dn6mRH62An6xBH6jYP0uwP0ye30p5vp79bTp1fRZ1YsrNf//6fV9Km19I/r6B966W830F/30V9tpL/op3/uoT/f9HteX8+6P9lCf7SDfn8P/eZ++tVB+vgQ/fwp+ugovX5+1c+/eeer+ZQc80k3n3TzaT4lxXzSzSfdfJpPSTGfdPNJN5/mU1LMJ9180s2n+ZQU80k3n3TzaT4lxXzSzSfdfJpPSTGfdPNJN5/mU1LMJ9180s2n+ZQU80k3n3TzaT4lxXzSzSfdfJpPSTGfdPNJN5/mU1LMJ9180s2n+ZQU80k3n3TzaT4lxXzSzSfdfIbIYuH9PruuiPf79H6fsvTx6pPu1Sfdq0/zKSnmk24+6ebTfEqK+aSbT7r5NJ+SYj7p5pNuPs2npJhPuvmkm0/zKSnmk24+6ebTfEqK+aSbT7r5NJ+SYj7p5pNuPs2npJhPuvmkm0/zKSnmk24+6ebTfEqK+aSbT7r5NJ+SYj7p5pNuPs2npJhPuvmkm0/zKSnmk24+6ebTfEqK+aSbT7r5DJHFwvt9dl0R7/fp/T5l6ePVJ92rT7pXn+ZTUswn3XzSzaf5lBTzSTefdPNpPiXFfNLNJ918mk9JMZ9080k3n+ZTUswn3XzSzaf5lBTzSTefdPNpPiXFfNLNJ918mk9JMZ9080k3n+ZTUswn3XzSzaf5lBTzSTefdPNpPiXFfNLNJ918mk9JMZ9080k3n+ZTUswn3XzS//t8fgflSurmWqdMRAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+	</style>
+	<path id="Shape 1" fill-rule="evenodd" class="s0" d="m705 0v47h-705v-47z"/>
+	<use id="Layer 1 copy 6" href="#img1" x="-637" y="0"/>
+</svg>
