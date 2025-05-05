@@ -1,0 +1,42 @@
+:root {
+    --md-primary-fg-color:        #660099;
+    --md-primary-fg-color--light: #aa00ff;
+    --md-primary-fg-color--dark:  #aa00ff;
+  }
+
+/* Ensure the table spans the full width of its container */
+.md-typeset__table {
+    width: 100%;
+}
+
+/* General table styling */
+.md-typeset table:not([class]) {
+	display: table;
+    width: 100%;
+    table-layout: fixed; /* Fixed layout to ensure columns don't expand */
+    word-wrap: break-word; /* Break long words and wrap text */
+    overflow-wrap: break-word; /* Ensure content wraps within cells */
+}
+
+/* Specific width for the third column (Picture column) */
+.md-typeset table th:nth-child(3),
+.md-typeset table td:nth-child(3) {
+    width: 100px; /* Fixed width for the picture column */
+}
+
+/* Remove padding and adjust text size */
+.md-typeset table th,
+.md-typeset table td {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    vertical-align: middle; /* Center vertically */
+    font-size: 90%; /* Slightly smaller text */
+}
+
+/* Ensure images within the picture column don't exceed their cell size */
+.md-typeset table img {
+    max-width: 100%; /* Make sure images fit within the cell */
+    height: auto;
+}
+
