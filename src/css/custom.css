@@ -978,8 +978,9 @@ article.margin-bottom--xl {
 /*#endregion Blog*/
 
 /*#region Wiki*/
-.sidebarViewport_aRkj {
-  margin-top: 2rem;
+
+.docSidebarContainer_YfHR {
+  --ifm-navbar-height: 8rem !important;
 }
 
 .menu_SIkG {
@@ -1278,13 +1279,8 @@ article.margin-bottom--xl {
     --ifm-button-size-multiplier: 1.25 !important;
   }
 
-  .sidebarViewport_aRkj {
-    margin-top: 2rem;
-  }
-
   .docSidebarContainer_YfHR {
     --ifm-navbar-height: 10rem !important;
-    --doc-sidebar-width: 320px !important;
     font-size: 1.25rem;
   }
 
@@ -1373,10 +1369,6 @@ article.margin-bottom--xl {
 
   li::marker {
     font-size: unset !important;
-  }
-
-  .sidebarViewport_aRkj {
-    margin-top: 3.5rem;
   }
 
   .docSidebarContainer_YfHR {
