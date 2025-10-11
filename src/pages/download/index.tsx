@@ -60,7 +60,11 @@ function DownloadPage() {
 
           { /* Black box with information */ }
           <div className={styles.downloadInfoDiv}>
-            <p>Sitekick Remastered is available for Android and Windows 10/11 devices. <br />Apple devices are not supported at this time.</p>
+            <p>
+              Sitekick Remastered is available for Android and Windows 10/11 devices.
+              <br />
+              Apple devices are not supported. <Link href="/docs/tutorials/downloading">Click here</Link> for more info.
+            </p>
           </div>
 
           { /* Beta warning */ }

@@ -44,10 +44,10 @@
 .downloadInfoDiv{
   background-color: #000;
   color: #FFF;
-  width: 40%;
+  width: calc(100% * (2/3));
   text-align: center;
   font-size: 1.1rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 25px;
   margin-bottom: 2rem;
 }
