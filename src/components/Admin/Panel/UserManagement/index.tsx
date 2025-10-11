@@ -9,6 +9,7 @@ import AltAccountsModal from "./Modals/AltAccountsModal";
 import DeleteAccountModal from "./Modals/DeleteAccountModal";
 import EditInfoModal from "./Modals/EditInfoModal";
 import ResetPassModal from "./Modals/ResetPassModal";
+import ResetXpModal from "./Modals/ResetXpModal";
 import UserDetails from "./UserDetails";
 
 import styles from "./index.module.css";
@@ -23,6 +24,7 @@ enum ModalTypes {
   BanHistory,
   AltAccounts,
   ResetPass,
+  ResetXp,
   BadgeMgmt,
   DeleteAcc
 }
@@ -139,6 +141,7 @@ export default function UserManagement({ gmInfo }): ReactNode {
           { currModal == ModalTypes.BanHistory && <BanHistoryModal /> }
           { currModal == ModalTypes.AltAccounts && <AltAccountsModal /> }
           { currModal == ModalTypes.ResetPass && <ResetPassModal /> }
+          { currModal == ModalTypes.ResetXp && <ResetXpModal /> }
           {/*{ currModal == ModalTypes.BadgeMgmt && <BadgeMgmtModal /> */}
           { currModal == ModalTypes.DeleteAcc && <DeleteAccountModal resetView={() => setCV("search")} /> }
         </div>

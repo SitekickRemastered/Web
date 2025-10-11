@@ -17,6 +17,7 @@ const config: Config = {
     GET_ONE: process.env.GET_ONE,
     GET_LIST: process.env.GET_LIST,
     CHANGE_INFO: process.env.CHANGE_INFO,
+    RESET_XP: process.env.RESET_XP,
     PASS_RESET: process.env.PASS_RESET,
     CREATE_PASS_RESET: process.env.CREATE_PASS_RESET,
     BAN: process.env.BAN,

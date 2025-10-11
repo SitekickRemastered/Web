@@ -59,7 +59,7 @@
   justify-content: space-evenly;
 }
 
-.playerDetailsContainer {
+.pdContainer {
   width: 30rem;
   margin: 3px 0 0.5rem 0;
   padding: 10px;
@@ -68,7 +68,7 @@
   font-size: 0.9em;
 }
 
-.playerDetailsImg {
+.pdImg {
   float: left;
   width: 75px;
   height: 75px;
@@ -79,7 +79,7 @@
   clear: both;
 }
 
-.playerDetailsName {
+.pdName {
   margin: 1px 0 40px;
   border-bottom: 1px solid rgba(255,255,255,0.15);
   word-break: break-word;
@@ -87,12 +87,12 @@
   line-height: 1.8em;
 }
 
-.playerDetailsInfoBlock {
+.pdInfoBlock {
   padding: 5px 10px;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-.playerDetailsInfoBlock span {
+.pdInfoBlock span {
   float: right;
   color: #6E7879;
 }

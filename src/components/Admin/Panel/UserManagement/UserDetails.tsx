@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState, type ReactNode } from "react";
 import Heading from "@theme/Heading";
 import { UmContext } from ".";
-import { faSquareCheck, faGavel, faLock, faPenToSquare, /*faShield,*/ faTrash, faClone, faBook } from "@fortawesome/free-solid-svg-icons";
+import { faSquareCheck, faGavel, faLock, faPenToSquare, /*faShield,*/ faTrash, faClone, faBook, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./index.module.css";
@@ -47,21 +47,21 @@ export default function UserDetails( { fromTable, searchTerm, openListView }): R
         { fromTable && <button className="d-flex m-auto mb-1" onClick={() => openListView()}>Back to List</button> }
         <div className="d-flex">
           <div>
-            <div id="playerDetailsContainer" className={styles.playerDetailsContainer}>
-              <div className={styles.playerDetailsImg} style={{ backgroundColor: playerDetails.sitekickColour || "#FFCC00" }} />
-              <Heading as="h2" className={styles.playerDetailsName}>{playerDetails.username}</Heading>
+            <div id="playerDetailsContainer" className={styles.pdContainer}>
+              <div className={styles.pdImg} style={{ backgroundColor: playerDetails.sitekickColour || "#FFCC00" }} />
+              <Heading as="h2" className={styles.pdName}>{playerDetails.username}</Heading>
               <div id="infoContainer">
-                <div className={styles.playerDetailsInfoBlock}>Account ID<span>{playerDetails.accountId}</span></div>
-                {isAdmin && <div className={styles.playerDetailsInfoBlock}>Email<span>{playerDetails.email}</span></div> }
-                <div className={styles.playerDetailsInfoBlock}>Username<span>{playerDetails.username}</span></div>
-                <div className={styles.playerDetailsInfoBlock}>Sitekick Name<span>{playerDetails.sitekickName}</span></div>
-                <div className={styles.playerDetailsInfoBlock}>Total XP<span>{playerDetails.xp}</span></div>
-                <div className={styles.playerDetailsInfoBlock}>Verified Status<span>{playerDetails.verified ? "Verified" : "Not Verified"}</span></div>
-                <div className={styles.playerDetailsInfoBlock}>Banned Status<span>{playerDetails.banStatus}</span></div>
-                {isAdmin && <div className={styles.playerDetailsInfoBlock}>Account Type<span>{playerDetails.isMain ? "Main" : "Alt"}</span></div> }
-                {isAdmin && <div className={styles.playerDetailsInfoBlock}>Number of Alts<span>{playerDetails.numAlts}</span></div> }
-                <div className={styles.playerDetailsInfoBlock}>Date Created<span>{playerDetails.dateCreated}</span></div>
-                <div className={styles.playerDetailsInfoBlock}>Last Interaction<span>{playerDetails.lastInteraction}</span></div>
+                <div className={styles.pdInfoBlock}>Account ID<span>{playerDetails.accountId}</span></div>
+                {isAdmin && <div className={styles.pdInfoBlock}>Email<span>{playerDetails.email}</span></div> }
+                <div className={styles.pdInfoBlock}>Username<span>{playerDetails.username}</span></div>
+                <div className={styles.pdInfoBlock}>Sitekick Name<span>{playerDetails.sitekickName}</span></div>
+                <div className={styles.pdInfoBlock}>Total XP<span>{playerDetails.xp}</span></div>
+                <div className={styles.pdInfoBlock}>Verified Status<span>{playerDetails.verified ? "Verified" : "Not Verified"}</span></div>
+                <div className={styles.pdInfoBlock}>Banned Status<span>{playerDetails.banStatus}</span></div>
+                {isAdmin && <div className={styles.pdInfoBlock}>Account Type<span>{playerDetails.isMain ? "Main" : "Alt"}</span></div> }
+                {isAdmin && <div className={styles.pdInfoBlock}>Number of Alts<span>{playerDetails.numAlts}</span></div> }
+                <div className={styles.pdInfoBlock}>Date Created<span>{playerDetails.dateCreated}</span></div>
+                <div className={styles.pdInfoBlock}>Last Interaction<span>{playerDetails.lastInteraction}</span></div>
               </div>
             </div>
           </div>
@@ -83,7 +83,10 @@ export default function UserDetails( { fromTable, searchTerm, openListView }): R
                     isAdmin &&
                       <>
                         <ActionButton colour={hasAlts ? "pink" : "white"} modalType={ModalTypes.AltAccounts} icon={faClone} name={hasAlts ? "Alternate Accounts" : "User has no alt accounts"} isDisabled={!hasAlts} />
-                        <ActionButton colour="blue" modalType={ModalTypes.ResetPass} icon={faLock} name="Reset Password" />
+                        <div className="d-flex" style={{ gap: "2rem" }}>
+                          <ActionButton colour="blue" modalType={ModalTypes.ResetPass} icon={faLock} name="Reset Password" />
+                          <ActionButton colour="gold" modalType={ModalTypes.ResetXp} icon={faStar} name="Reset Xp" />
+                        </div>
                         {/*<ActionButton colour="purple" modalType={ModalTypes.BadgeMgmt} icon={faShield} name="Badge Management" />*/}
                         <ActionButton colour="black" modalType={ModalTypes.DeleteAcc} icon={faTrash} name="Delete Account" />
                       </>

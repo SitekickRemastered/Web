@@ -834,6 +834,21 @@ button.lg, button--flat.lg {
     inset -4px -4px 4px #380026;
 }
 
+.button--flat.gold {
+  background: #d4af37;
+  color: #000;
+  box-shadow:
+    inset 4px 4px 4px #ffe58f,
+    inset -4px -4px 4px #4d3c05;
+}
+.button--flat.gold:hover {
+  background: #5c4601;
+  color: #d4af37;
+  box-shadow:
+    inset 4px 4px 4px #332e1c,
+    inset -4px -4px 4px #241c02;
+}
+
 .button--flat.black {
   background: #1a1a1a;
   color: #eee;

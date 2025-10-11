@@ -23,6 +23,13 @@ export default function DeleteAccountModal({ resetView }): ReactNode {
     });
   }, [playerDetails]);
 
+  function closeModal() {
+    const confirmBtn = document.getElementById("deleteAccBox") as HTMLInputElement;
+    confirmBtn.checked = false;
+    setConfirmed(false);
+    closeUmModal();
+  }
+
   function deleteAccount() {
     const data = {
       account_id: playerDetails.accountId
@@ -31,7 +38,7 @@ export default function DeleteAccountModal({ resetView }): ReactNode {
     return postRequest(gmInfo, customFields, data, customFields.DELETE, "Failed to delete player's account.").then((res) => {
       if (res)
         alert(`${playerDetails.username}'s account was deleted successfully`);
-      closeUmModal();
+      closeModal();
       resetView();
     });
   }
@@ -39,7 +46,7 @@ export default function DeleteAccountModal({ resetView }): ReactNode {
   return (
     <div className="modalContainer">
       <div id="modalHeader" className="modalHeader light" style={{ backgroundColor: "#1a1a1a" }}>
-        <span id="closeModal" className="closeModal light" onClick={() => closeUmModal()}>&times;</span>
+        <span id="closeModal" className="closeModal light" onClick={() => closeModal()}>&times;</span>
         <Heading as="h2" className="modalTitle">Delete Account</Heading>
       </div>
       <div id="modalBody" className="modalBody">
