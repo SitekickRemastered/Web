@@ -31,6 +31,13 @@ const ArtList: GalleryItem[] = [
     socialLinks: {}
   },
   {
+    urls: ["/img/fan_art/bkells/bkells2.png"],
+    alt: "\"Monster pumpkin\" created by bkells",
+    title: "\"Monster pumpkin\" created by bkells",
+    isLink: false,
+    socialLinks: {}
+  },
+  {
     urls: ["/img/fan_art/cyby/cyby1.png"],
     alt: "\"3D Sitekick\" created by cyby",
     title: "\"3D Sitekick\" created by cyby",
@@ -84,6 +91,13 @@ const ArtList: GalleryItem[] = [
     socialLinks: {
       "https://www.youtube.com/@ItsStephJM": <FontAwesomeIcon icon={faYoutube} />
     }
+  },
+  {
+    urls: ["/img/fan_art/azuly/azuly.png"],
+    alt: "\"Whiteboard doodle\" created by Azuly",
+    title: "\"Whiteboard doodle\" created by Azuly",
+    isLink: false,
+    socialLinks: {}
   },
   {
     urls: ["https://www.youtube.com/embed/uSs4KQWMwIk?si=iOqPPBkDlQ1Ceclt"],
