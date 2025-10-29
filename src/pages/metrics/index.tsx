@@ -109,7 +109,7 @@ const ChipMetricsList: ChipMetricsItem[] = [
 
 function MetricsCard(props) {
   return (
-    <div className={`col col--4 ${styles.metricsCard}`}>
+    <div className={styles.metricsCard}>
       <Heading as="h2" className="mb-1">{ props.title }</Heading>
       <FontAwesomeIcon icon={props.icon} size="6x" />
       <hr />
@@ -129,7 +129,7 @@ function MetricsCardChip(props) {
   const chipIcon = (chipDetails) ? `/img/wiki/chipendium/icons/chip_${chipDetails[0]}_icon.png` : "";
   const iconAlt = (chipDetails) ? `Chip #${chipDetails[1]} icon` : "";
   return (
-    <div className={`col col--4 ${styles.metricsCard}`}>
+    <div className={`col ${styles.metricsCard}`}>
       <Heading as="h2" className="mb-1">{ props.title }</Heading>
       {
         (props.data[props.keyStr]) ?
@@ -148,19 +148,10 @@ function MetricsCardChip(props) {
   );
 }
 
-function splitMetrics<MetricsItem>(arr: MetricsItem[], size: number): MetricsItem[][] {
-  const result: MetricsItem[][] = [];
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
-  return result;
-}
-
 export default function Status() {
   const { siteConfig: { customFields } } = useDocusaurusContext();
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState({});
-  const rows = splitMetrics(MetricsList, 3);
 
   const url = `${customFields.BASE_URL}${customFields.METRICS}`;
   const token = "online_players,total_players,daily_registrations,daily_online_players,total_chips,released_chips,most_wanted,most_common,rarest_chip";
@@ -189,14 +180,12 @@ export default function Status() {
           (Object.keys(data).length) ?
             <>
               <p>This page is updated every 30 seconds!</p>
-              {rows.map((row, rowIndex) => (
-                <div key={rowIndex} className="row justify-content-center">
-                  {row.map((props, idx) => (
-                    <MetricsCard key={idx} data={data} {...props} />
-                  ))}
-                </div>
-              ))}
-              <div className="row justify-content-center">
+              <div className={styles.mcContainer}>
+                {MetricsList.map((props, idx) => (
+                  <MetricsCard key={idx} data={data} {...props} />
+                ))}
+              </div>
+              <div className={styles.mcContainer}>
                 {ChipMetricsList.map((props, idx) => (
                   <MetricsCardChip key={idx} data={data} {...props} />
                 ))}
