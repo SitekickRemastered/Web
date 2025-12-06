@@ -58,25 +58,17 @@ function DownloadPage() {
           <img className={styles.downloadLogo} src={useBaseUrl("/img/logo-beta.svg")} alt="Sitekick Remastered Beta Logo"/>
           <Heading as="h1" className={styles.slogan}>Made by fans, for fans</Heading>
 
-          { /* Black box with information */ }
-          <div className={styles.downloadInfoDiv}>
-            <p>
-              Sitekick Remastered is available for Android and Windows 10/11 devices.
-              <br />
-              Apple devices are not supported. <Link href="/docs/tutorials/downloading">Click here</Link> for more info.
-            </p>
-          </div>
-
           { /* Beta warning */ }
-          <div className={`admonition alert alert--danger ${styles.alertDiv}`}>
-            <div className={`admonitionHeading ${styles.alertFont}`}>
-              <span className={`admonitionIcon ${styles.alertFont}`}>
+          <div className={"admonition alert alert--danger"}>
+            <div className={"admonitionHeading"}>
+              <span className={"admonitionIcon"}>
                 <FontAwesomeIcon icon={faWarning} />
                 <b> Warning</b>
               </span>
             </div>
-            <div className={`admonitionContent ${styles.alertFont}`}>
-              <p>Sitekick Remastered is still in Beta. All chips, xp, and collection lists will be wiped upon the full release.</p>
+            <div className="admonitionContent">
+              <p style={{ textAlign: "center" }}>Sitekick Remastered is still in Beta. All chips, xp, and collection lists will be wiped upon the full release.</p>
+              <p style={{ textAlign: "center", marginBottom: 0 }}>Apple devices are not supported. <Link href="/docs/tutorials/downloading">Click here</Link> for more info.</p>
             </div>
           </div>
 

@@ -9,12 +9,7 @@
   min-height: 100vh;
 }
 
-/* 
-  This isn't *truely* centred vertically, but it looks better 
-  since the antenna makes the content look lower than it is 
-*/
 .downloadInner {
-  margin-top: 6rem;
   width: 80%;
   display: flex;
   align-items: center;
@@ -35,7 +30,7 @@
 .slogan {
   color: #FFF;
   font-size: 2rem;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 0.1rem;
   -webkit-text-stroke-color: black;
   text-align: center;
   margin-top: 0.5rem;
@@ -92,10 +87,6 @@
     font-size: 1rem;
     padding: 1.25rem;
     margin-bottom: 1rem;
-  }
-
-  .alertFont p {
-    margin: 0;
   }
 
   .downloadButtonContainer{
