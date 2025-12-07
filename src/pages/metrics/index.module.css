@@ -38,3 +38,11 @@
   min-width: 400px;
   max-width: 400px;
 }
+
+@media screen and (max-width: 400px) {
+
+  .metricsCard {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
