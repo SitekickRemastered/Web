@@ -61,10 +61,13 @@ export default function CollectionListTable({ gmInfo, customFields, chipList }):
     modalElem.current.style.display = "block";
   }
 
-  function closeModal() {
+  function closeModal(refreshList: boolean = false) {
     modalElem.current.style.display = "none";
     setLD({});
+    if (refreshList)
+      fetchCollectionLists();
   }
+
   useEffect(() => {
     fetchCollectionLists();
     addModalListeners(modalElem, closeModal);

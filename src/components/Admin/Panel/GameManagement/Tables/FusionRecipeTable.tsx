@@ -54,10 +54,13 @@ export default function FusionRecipeTable({ gmInfo, customFields, chipList }): R
     modalElem.current.style.display = "block";
   }
 
-  function closeModal() {
+  function closeModal(refreshList: boolean = false) {
     modalElem.current.style.display = "none";
     setFD({});
+    if (refreshList)
+      fetchFusions();
   }
+
   useEffect(() => {
     fetchFusions();
     addModalListeners(modalElem, closeModal);

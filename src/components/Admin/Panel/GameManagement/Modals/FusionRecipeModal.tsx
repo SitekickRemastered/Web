@@ -6,22 +6,20 @@ import { postRequest } from "@site/src/utils/helpers";
 
 export default function FusionRecipeModal({ gmInfo, chipList, closeModal, fusionInfo }): ReactNode {
   const { siteConfig: { customFields } } = useDocusaurusContext();
-  const [selectedChips, setCL] = useState<string[]>();
+  const [selectedChips, setSC] = useState<string[]>();
+  const [selectedReward, setSR] = useState<string[]>();
   const [isEdit, setIE] = useState(false);
-  const [listToEdit, setLTE] = useState({ chips: [], reward: [] });
 
   useEffect(() => {
-    setIE(fusionInfo.name);
-    setLTE({
-      chips: fusionInfo.chips ?? [],
-      reward: fusionInfo.reward ?? [],
-    });
+    setIE(fusionInfo.id);
+    setSC(fusionInfo.chips ?? []);
+    setSR(fusionInfo.reward ? [fusionInfo.reward] : []);
   }, [fusionInfo]);
 
 
   function sendCListRequest() {
     const chipList = JSON.stringify(selectedChips);
-    const reward = (document.getElementById("cListName") as HTMLInputElement).value;
+    const reward = JSON.stringify(selectedReward[0]);
 
     if (!chipList || chipList.length === 0) {
       alert("Chip list must not be null!");
@@ -43,7 +41,7 @@ export default function FusionRecipeModal({ gmInfo, chipList, closeModal, fusion
     return postRequest(gmInfo, customFields, data, reqLink, `Failed to ${resVer} fusion recipe`).then((res) => {
       if (res)
         alert(`Fusion recipe was ${resVer}ed successfully`);
-      closeModal();
+      closeModal(true);
     });
   }
 
@@ -56,10 +54,10 @@ export default function FusionRecipeModal({ gmInfo, chipList, closeModal, fusion
       <div id="modalBody" className="modalBody overflow--visible">
         <div className="row mb-1">
           <div className="col w-50">
-            <MultiSelectDropdown options={chipList} label={"Chip List"} value={listToEdit.chips} limit={8} onChange={(selected) => { setCL(selected); }} />
+            <MultiSelectDropdown options={chipList} label={"Chip List"} value={selectedChips} limit={8} onChange={(selected) => { setSC(selected); }} />
           </div>
           <div className="col w-50">
-            <MultiSelectDropdown options={chipList} label={"Reward"} value={listToEdit.reward} limit={1} onChange={(selected) => { setCL(selected); }} />
+            <MultiSelectDropdown options={chipList} label={"Reward"} value={selectedReward} limit={1} onChange={(selected) => { setSR(selected); }} />
           </div>
         </div>
 

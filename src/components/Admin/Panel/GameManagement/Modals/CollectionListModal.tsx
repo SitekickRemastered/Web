@@ -52,7 +52,7 @@ export default function CollectionListModal({ gmInfo, chipList, closeModal, cLis
     return postRequest(gmInfo, customFields, data, reqLink, `Failed to ${resVer} collection list`).then((res) => {
       if (res)
         alert(`Collection list was ${resVer}ed successfully`);
-      closeModal();
+      closeModal(true);
     });
   }
 

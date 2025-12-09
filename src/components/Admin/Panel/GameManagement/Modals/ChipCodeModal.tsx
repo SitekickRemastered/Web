@@ -74,7 +74,7 @@ export default function ChipCodeModal({ gmInfo, chipList, closeModal, codeInfo }
     return postRequest(gmInfo, customFields, data, reqLink, `Failed to ${resVer} chip code`).then((res) => {
       if (res)
         alert(`Chip code was ${resVer}ed successfully`);
-      closeModal();
+      closeModal(true);
     });
   }
 

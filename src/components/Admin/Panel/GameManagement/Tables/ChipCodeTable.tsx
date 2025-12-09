@@ -54,9 +54,11 @@ export default function ChipCodeTable({ gmInfo, customFields, chipList }): React
     modalElem.current.style.display = "block";
   }
 
-  function closeModal() {
+  function closeModal(refreshList: boolean = false) {
     modalElem.current.style.display = "none";
     setCD({});
+    if (refreshList)
+      fetchChipCodes();
   }
 
   useEffect(() => {
