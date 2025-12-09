@@ -43,8 +43,10 @@ export default function ChipCodeTable({ gmInfo, customFields, chipList }): React
       chip_code_id: chipCodeId
     };
     return postRequest(gmInfo, customFields, data, customFields.DEL_CODE, "Failed to delete chip code.").then((res) => {
-      if (res)
+      if (res) {
         alert("Chip code #" + chipCodeId + " was successfully deleted.");
+        fetchChipCodes();
+      }
     });
   }
 

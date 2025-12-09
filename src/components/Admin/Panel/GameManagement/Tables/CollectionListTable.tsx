@@ -50,8 +50,11 @@ export default function CollectionListTable({ gmInfo, customFields, chipList }):
     const data = {
       collection_list_id: cListId
     };
-    return postRequest(gmInfo, customFields, data, customFields.DEL_C_LIST, "Failed to delete chip code.").then(() => {
-      alert("Collection List " + cListName + " was successfully deleted.");
+    return postRequest(gmInfo, customFields, data, customFields.DEL_C_LIST, "Failed to delete chip code.").then((res) => {
+      if (res) {
+        alert("Collection List " + cListName + " was successfully deleted.");
+        fetchCollectionLists();
+      }
     });
   }
 

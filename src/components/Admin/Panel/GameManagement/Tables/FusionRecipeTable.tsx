@@ -39,12 +39,15 @@ export default function FusionRecipeTable({ gmInfo, customFields, chipList }): R
     if (!confirm(`Are you sure you want to delete fusion #${fusionId}? This action cannot be undone.`))
       return;
 
+
     const data = {
-      fusionId: fusionId
+      fusion_id: fusionId
     };
     return postRequest(gmInfo, customFields, data, customFields.DEL_FUSION, "Failed to delete fusion.").then((res) => {
-      if (res)
+      if (res){
         alert("Fusion #" + fusionId + " was successfully deleted.");
+        fetchFusions();
+      }
     });
   }
 
