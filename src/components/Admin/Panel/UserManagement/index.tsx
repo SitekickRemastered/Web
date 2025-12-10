@@ -47,6 +47,10 @@ export default function UserManagement({ gmInfo }): ReactNode {
 
   function searchBtn() {
     const noe = (document.getElementById("email") as HTMLInputElement).value;
+    if (noe.length < 3) {
+      alert("Search term must be at least three characters!\n(Emails and usernames in Sitekick are a minimum of three characters)");
+      return;
+    }
     setST(noe);
     const searchType = (document.getElementById("searchType") as HTMLInputElement).value;
     const btn = document.getElementById("searchBtn");
@@ -95,14 +99,19 @@ export default function UserManagement({ gmInfo }): ReactNode {
     modalElem.current.style.display = "block";
   }
 
-  function closeUmModal(refresh = false) {
+  function closeUmModal(refresh = false, newNoe?: string) {
     if (refresh) {
-      getPlayerRequest(playerDetails?.username ?? "", false).then(data => {
+      getPlayerRequest(newNoe ?? playerDetails?.username ?? "", false).then(data => {
         if (!data) return;
         setPD(data.player);
       });
     }
     modalElem.current.style.display = "none";
+  }
+
+  function backToListView() {
+    getPlayerRequest(searchTerm ?? "", true).then(data =>listData(data));
+    setCV("list");
   }
 
   return (
@@ -114,7 +123,7 @@ export default function UserManagement({ gmInfo }): ReactNode {
       </p>
 
       <div className="inputGroup w-30 pb-1">
-        <input className="input--bootstrap" name="email" id="email" type="email" placeholder="Username or Email" />
+        <input className="input--bootstrap" name="email" id="email" type="email" placeholder="Username or Email" minLength={3}  />
         <select className={styles.searchDropdown} name="searchType" id="searchType" defaultValue="list">
           <option value="list">List</option>
           <option value="single">Single</option>
@@ -132,7 +141,7 @@ export default function UserManagement({ gmInfo }): ReactNode {
         closeUmModal
       }}>
         { currView == "list" && <AccountTable playerList={playerList} /> }
-        { currView == "details" && <UserDetails fromTable={fromTable} searchTerm={searchTerm} openListView={() => setCV("list")}/> }
+        { currView == "details" && <UserDetails fromTable={fromTable} searchTerm={searchTerm} openListView={() => backToListView()}/> }
 
         <div ref={modalElem} className="modalOverlay">
           { currModal == ModalTypes.EditInfo && <EditInfoModal /> }

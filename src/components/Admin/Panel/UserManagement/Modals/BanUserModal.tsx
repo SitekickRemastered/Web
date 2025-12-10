@@ -12,24 +12,25 @@ export default function BanUserModal(): ReactNode {
   const [dataError, setDE] = useState(false);
 
   useEffect(() => {
+    const expInput = (document.getElementById("expiration") as HTMLInputElement);
+    expInput.min = new Date().toLocaleDateString("fr-ca");
+
     if (!playerDetails.username){
       setDE(true);
       return;
     }
 
-    if (isAdmin) {
-      const datePicker = document.getElementById("expiration") as HTMLTextAreaElement;
-      const isBannedBox = document.getElementById("permaBanBox") as HTMLInputElement;
+    const datePicker = document.getElementById("expiration") as HTMLTextAreaElement;
+    const isBannedBox = document.getElementById("permaBanBox") as HTMLInputElement;
 
-      isBannedBox.addEventListener("change", function() {
-        datePicker.disabled = this.checked;
-      });
-    }
+    isBannedBox.addEventListener("change", function() {
+      datePicker.disabled = this.checked;
+    });
   }, [playerDetails]);
 
   function banUser() {
     const expiration = (document.getElementById("expiration") as HTMLTextAreaElement).value;
-    const isBanned = isAdmin ? (document.getElementById("permaBanBox") as HTMLInputElement).checked : false;
+    const isBanned = (document.getElementById("permaBanBox") as HTMLInputElement).checked ?? false;
     const reason = (document.getElementById("reason") as HTMLInputElement).value;
 
     if (!expiration && !isBanned) {
@@ -61,7 +62,7 @@ export default function BanUserModal(): ReactNode {
     <div className="modalContainer">
       <div id="modalHeader" className="modalHeader" style={{ backgroundColor: "#cc0000" }}>
         <span id="closeModal" className="closeModal" onClick={() => closeUmModal()}>&times;</span>
-        <Heading as="h2" className="modalTitle">{ isAdmin ? "Ban / Suspend User" : "Suspend User" }</Heading>
+        <Heading as="h2" className="modalTitle">Ban / Suspend User</Heading>
       </div>
       <div id="modalBody" className="modalBody">
         {
@@ -75,19 +76,15 @@ export default function BanUserModal(): ReactNode {
               <div>
                 <label htmlFor="expiration" className="input--label">Expiration:</label>
                 <input className="input--bootstrap sm" name="expiration" id="expiration" type="date" />
-                { isAdmin &&
-                  <>
-                    <br/>
-                    <input type="checkbox" id="permaBanBox" name="permaBanBox" />
-                    <label htmlFor="permaBanBox"> Permanently Ban</label>
-                  </>
-                }
+                <br/>
+                <input type="checkbox" id="permaBanBox" name="permaBanBox" />
+                <label htmlFor="permaBanBox"> Permanently Ban</label>
               </div>
               <br/>
               <label htmlFor="reason" className="input--label">Reason (max 512 characters):</label>
               <textarea className={styles.textareaReason} name= "reason" id="reason" maxLength={512} />
               <br/>
-              <button type="button" className="d-flex m-auto button--bootstrap red" onClick={ () => banUser()}>{isAdmin ? "Ban / Suspend User" : "Suspend User" }</button>
+              <button type="button" className="d-flex m-auto button--bootstrap red" onClick={ () => banUser()}>Ban / Suspend User</button>
             </>
         }
       </div>
@@ -98,9 +95,9 @@ export default function BanUserModal(): ReactNode {
 
 export function UnbanUserModal(): ReactNode {
   const { siteConfig: { customFields } } = useDocusaurusContext();
-  const { gmInfo, isAdmin, playerDetails, closeUmModal } = useContext(UmContext);
+  const { gmInfo, playerDetails, closeUmModal } = useContext(UmContext);
   const [dataError, setDE] = useState(false);
-  const title = isAdmin ? "Unban / Unsuspend User" : "Unsuspend User";
+  const title = "Unban / Unsuspend User";
 
   useEffect(() => {
     if (!playerDetails.username){

@@ -76,7 +76,7 @@ export default function UserDetails( { fromTable, searchTerm, openListView }): R
                       colour={isBanned ? "green" : "red"}
                       modalType={isBanned ? ModalTypes.UnbanUser : ModalTypes.BanUser}
                       icon={isBanned ? faSquareCheck : faGavel}
-                      name={isBanned ? (isAdmin ? "Unban / Unsuspend" : "Unsuspend") : (isAdmin ? "Ban / Suspend" : "Suspend") + " User"}/>
+                      name={(isBanned ? "Unban / Unsuspend" : "Ban / Suspend") + " User"}/>
                   }
                   <ActionButton colour={hasHistory ? "orange" : "white"} modalType={ModalTypes.BanHistory} icon={faBook} name={hasHistory ? "Ban History" : "User has no ban history"} isDisabled={!hasHistory} />
                   {
