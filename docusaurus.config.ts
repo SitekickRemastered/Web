@@ -58,15 +58,12 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
-  // For Docusaurus faster https://github.com/facebook/docusaurus/issues/10556
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true, // required
     },
-    experimental_faster: true,
+    faster: true,
   },
-
   plugins: [require.resolve("docusaurus-lunr-search")],
 
   presets: [
@@ -94,7 +91,7 @@ const config: Config = {
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
-          // Use "warn" for this if you want to be warned about mdx files not have <!-- truncate --> (Which adds "Read More")
+          // Use "warn" for this if you want to be warned about mdx files not have {/* truncate */} (Which adds "Read More")
           onUntruncatedBlogPosts: "ignore",
         },
         theme: {
