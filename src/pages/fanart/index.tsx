@@ -85,11 +85,11 @@ const ArtList: GalleryItem[] = [
   },
   {
     urls: ["/img/fan_art/steph/steph3d.png", "/img/fan_art/steph/steph2.png"],
-    alt: "\"Fixing Kablooey\" by ItsStephJM",
-    title: "\"Dr Frantic repairing Kablooey\" by ItsStephJM",
+    alt: "\"Fixing Kablooey\" by luckyrabbt",
+    title: "\"Dr Frantic repairing Kablooey\" by luckyrabbt",
     isLink: false,
     socialLinks: {
-      "https://www.youtube.com/@ItsStephJM": <FontAwesomeIcon icon={faYoutube} />
+      "https://www.youtube.com/@luckyrabbt": <FontAwesomeIcon icon={faYoutube} />
     }
   },
   {
